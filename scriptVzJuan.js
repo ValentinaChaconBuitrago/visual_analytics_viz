@@ -92,7 +92,7 @@ d3.csv("https://raw.githubusercontent.com/jcsanguino10/VisualAnalytics/master/pr
     }
     var mousemove = function (d) {
         tooltip
-            .html("The number of students is: " + d.estudiantes)
+            .html("El numero de estudiantes es: " + d.estudiantes)
             .style("left", (d3.mouse(this)[0] + 70) + "px")
             .style("top", (d3.mouse(this)[1]) + "px");
     }
