@@ -1,7 +1,7 @@
 
 
 //Read the data
-d3.csv("https://gist.githubusercontent.com/ValentinaChaconBuitrago/6530fdba6f37e57b9327f8d892cb08b5/raw/c4fce4e526ab13d91e5ce29a7380bf8322449bde/filtered_math.csv", function (data) {
+d3.csv("https://gist.githubusercontent.com/ValentinaChaconBuitrago/f77a909d5da26da984b522056d871799/raw/8a09631305aa68f92ec146a6d388fcc1769909b3/trial.csv", function (data) {
 
     // set the dimensions and margins of the graph
     var margin = { top: 80, right: 25, bottom: 60, left: 70 },
