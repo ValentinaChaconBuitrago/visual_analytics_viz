@@ -58,23 +58,24 @@
         <p class="font-italic">By Nicolas Caceres</p>
     </div>
 
-    <div class="container col-10 px-0 py-0 mb-1">
-        <p class="font-italic my-0 py-2">Modismo 2</p>
-        <div id="viz_juan"></div>
-        <script src="scriptVzJuan.js"></script>
-        <p class="font-italic">Por Juan Camilo Sanguino</p>
+    <div class="row">
+        <div class="container col-8">
+            <p class="font-italic my-0 py-2">Modismo 2</p>
+            <div id="viz_juan"></div>
+            <script src="scriptVzJuan.js"></script>
+            <p class="font-italic">Por Juan Camilo Sanguino</p>
+        </div>
     </div>
 
-    <div class="container col-10 px-0 py-0 mb-1">
+    <div class="container col-12 justify-content-center">
         <p class="font-italic my-0 py-2">Modismo 3.1</p>
         <div id="my_dataviz2"></div>
         <script src="scriptVzVale1.js"></script>
         <p class="font-italic">Por Valentina Chacón Buitrago</p>
     </div>
 
-    <div class="container col-10 px-0 py-0 mb-1">
-        <p class="font-italic my-0 py-2">Modismo 3.2</p>
-
+    <div class="container col-12">
+        <p class="font-italic my-0 py-2 justify-content-center">Modismo 3.2</p>
         <div id="my_dataviz"></div>
         <script src="scriptVzVale2.js"></script>
         <p class="font-italic">Por Valentina Chacón Buitrago</p>
@@ -86,7 +87,7 @@
         <ol>
             <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos de la nota obtenida y retiros. (Modismo 1)</li>
             <li>Uno de los objetivos principales de la visualización es identificar ( Query -> Identify) las correlaciones (Attributes
-                -> Many -> Correlation) entre las notas de español y las obtenidas en la clase de APO.</li>
+                -> Many -> Correlation) entre las notas de español y las obtenidas en la clase de APO.(Modismo 2)</li>
             <li>Uno de los objetivos principales de la visualización es identificar ( Query -> Identify) las correlaciones (Attributes
                 -> Many -> Correlation) entre el puntaje del icfes (en el criterio de lectura crítica) y las notas obtenidas
                 en la clase de APO</li>
@@ -95,6 +96,7 @@
         <ol>
             <li>Identificar (Query->Identify) outliers (All Data -> Outliers) en los porcentajes de los retiros y porcentaje de estudiantes que repobraron el curso de APO I a lo largo de los semestres, según la nota de precalculo o calculo que obtuvieron los estudiantes. (Modismo 1)</li>
             <li>Comparar (Query->Compare) las distribuciones  (Attributes->One->Distribution) de las notas de precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos de la nota obtenida y retiros.  (Modismo 1)</li>
+            <li>Comparar (Query->Compare) la cantidad de estudiantes (Attributes->Many) que comparten una misma nota de apo y una nota similar en español (Modismo 2) </li>
         </ol>
     </div>
     <div class="container my-5 col-8">
@@ -144,13 +146,13 @@
 
             <h4>Modismo 2:</h4>
             <h6>Marcas</h6>
-            <p>Puntos: Representa la nota de un estudiante en APO y en Español</p>
+            <p>Areas: Representa la nota de un grupo de estudiantes en APO y en Español</p>
             <h6>Canales</h6>
-            <p>Posicion vertical y horizontal: Se ubican los puntos segun la nota en español y APO</p>
+            <p>Posicion vertical y horizontal: Se ubican las areas segun la nota en español y APO</p>
+            <p>Color: representa la cantidad de estudiantes que comparte una nota de apo y de español en especifico</p>
             <h6>Encode</h6>
             <p>Arrange -> Express: Usado para las notas de ambas materias (APO y español)</p>
-            <p>Map -> Color -> Saturation: Determinar la cantidad de estudiantes con comportamientos en las notas similares
-                </p>
+            <p>Map -> Color -> Saturation: Determinar la cantidad de estudiantes con comportamientos en las notas similares</p>
 
             <h4>Modismo 3:</h4>
             <h6>Marcas</h6>
@@ -182,7 +184,7 @@
     </div> -->
     <div class="container-fluid navbar-dark bg-info py-4">
         <div class="row justify-content-end px-4">
-            <h5 class="text-light">22/10/2019</h5>
+            <h5 class="text-light">12/11/2019</h5>
         </div>
     </div>
 </body>
