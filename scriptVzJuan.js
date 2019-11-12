@@ -6,25 +6,17 @@ d3.csv("https://raw.githubusercontent.com/jcsanguino10/VisualAnalytics/master/pr
             'id': d.id,
             'semestre': d.semestre,
             'nota_español': d.leng1501,
-            'nota_apo': d.definitiva_banner
+            'nota_apo': d.definitiva_banner,
+            'retiro_banner': d.retiro_banner
         };
         if (d.leng1501 == 0) {
             newDat.nota_español = d.lite1611;
         }
         dat.push(newDat);
     })
-    var cotaInicial = 0
-    var cotFinal = 0.5
+    var datosCompletos = dat
     var datosFinal = []
-    while (cotFinal <= 5) {
-        var notaApo = 0;
-        while (notaApo <= 5) {
-            datosFinal.push(grupo(cotaInicial, cotFinal, notaApo, dat))
-            notaApo += 0.5
-        }
-        cotaInicial += 0.5
-        cotFinal += 0.5
-    }
+    calcularCluster()
     var margin = { top: 10, right: 0, bottom: 50, left: 70 },
         width = 600 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
@@ -105,23 +97,7 @@ d3.csv("https://raw.githubusercontent.com/jcsanguino10/VisualAnalytics/master/pr
     }
 
     // add the squares
-    svg.selectAll()
-        .data(datosFinal)
-        .enter()
-        .append("rect")
-        .attr("x", d => x(d.español))
-        .attr("y", d => y(d.apo))
-        .attr("rx", 4)
-        .attr("ry", 4)
-        .attr("width", x.bandwidth())
-        .attr("height", y.bandwidth())
-        .style("fill", function (d) { return myColor(d.estudiantes) })
-        .style("stroke-width", 4)
-        .style("stroke", "none")
-        .style("opacity", 0.8)
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave)
+    pintarCeldas()
 
     // X axis label:  
     svg.append("text")
@@ -137,9 +113,80 @@ d3.csv("https://raw.githubusercontent.com/jcsanguino10/VisualAnalytics/master/pr
         .attr("transform", "rotate(-90)")
         .attr("y", -margin.left + 15)
         .attr("x", -height / 2)
-        .text("Notas APO")
-});
+        .text("Notas APO");
 
+    d3.select("#selectButton").on("change", function () {
+        dat = datosCompletos
+        var selectedOption = d3.select(this).property("value")
+        if (selectedOption === "1") {
+            dat = dat.filter(d => d)
+            calcularCluster()
+            limpiar()
+            pintarCeldas()
+        }
+
+        else if (selectedOption === "2") {
+            dat = dat.filter(d => {
+                if (d.retiro_banner == 1) {
+                    return d;
+                }
+            })
+            calcularCluster()
+            limpiar()
+            pintarCeldas()
+        }
+
+        else if (selectedOption === "3") {
+            dat = dat.filter(d => {
+                if (d.retiro_banner == 0) {
+                    return d;
+                }
+            })
+            calcularCluster()
+            limpiar()
+            pintarCeldas()            
+        }
+    });
+    function calcularCluster() {
+        var cotaInicial = 0
+        var cotFinal = 0.5
+        datosFinal = []
+        while (cotFinal <= 5) {
+            var notaApo = 0;
+            while (notaApo <= 5) {
+                datosFinal.push(grupo(cotaInicial, cotFinal, notaApo, dat))
+                notaApo += 0.5
+            }
+            cotaInicial += 0.5
+            cotFinal += 0.5
+        }
+        return datosFinal;
+    }
+    function limpiar()
+    {
+        svg.selectAll("rect").remove()
+    }
+
+    function pintarCeldas() {
+        svg.selectAll()
+            .data(datosFinal)
+            .enter()
+            .append("rect")
+            .attr("x", d => x(d.español))
+            .attr("y", d => y(d.apo))
+            .attr("rx", 4)
+            .attr("ry", 4)
+            .attr("width", x.bandwidth())
+            .attr("height", y.bandwidth())
+            .style("fill", function (d) { return myColor(d.estudiantes) })
+            .style("stroke-width", 4)
+            .style("stroke", "none")
+            .style("opacity", 0.8)
+            .on("mouseover", mouseover)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
+    }
+});
 
 
 function grupo(a, b, c, datos) {

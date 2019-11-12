@@ -48,10 +48,20 @@
     </div>
 
     <div class="row">
-        <div class="container col-8">
+        <div class="container col-10">
             <p class="font-italic my-0 py-2">Modismo 2</p>
-            <div id="viz_juan"></div>
-            <script src="scriptVzJuan.js"></script>
+            <div class="row">
+                <div id="viz_juan"></div>
+                <script src="scriptVzJuan.js"></script>
+                <div class="form-group ml-3">
+                    <label for="selectButton">Filtro por retiro</label>
+                    <select class="form-control" id="selectButton">
+                      <option value="1">No filtrar</option>
+                      <option value="2">Estudiantes retirados</option>
+                      <option value="3">Estudiantes sin retirar</option>
+                    </select>
+                  </div>
+            </div>            
             <p class="font-italic">Por Juan Camilo Sanguino</p>
         </div>
     </div>
