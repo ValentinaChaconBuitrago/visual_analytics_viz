@@ -90,47 +90,63 @@
         <h2 class="font-weight-bold">Why</h2>
         <h5> Tareas Primarias: </h5>
         <ol>
-            <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de precalculo de
-                los estudiantes con su desempeño en la materia de APOI, desempeño en termino de la nota obtenida y retiros.</li>
+            <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos de la nota obtenida y retiros. (Modismo 1)</li>
             <li>Uno de los objetivos principales de la visualización es identificar ( Query -> Identify) las correlaciones (Attributes
                 -> Many -> Correlation) entre las notas de español y las obtenidas en la clase de APO.</li>
             <li>Uno de los objetivos principales de la visualización es identificar ( Query -> Identify) las correlaciones (Attributes
                 -> Many -> Correlation) entre el puntaje del icfes (en el criterio de lectura crítica) y las notas obtenidas
                 en la clase de APO</li>
         </ol>
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+            <li>Identificar (Query->Identify) outliers (All Data -> Outliers) en los porcentajes de los retiros y porcentaje de estudiantes que repobraron el curso de APO I a lo largo de los semestres, según la nota de precalculo o calculo que obtuvieron los estudiantes. (Modismo 1)</li>
+            <li>Comparar (Query->Compare) las distribuciones  (Attributes->One->Distribution) de las notas de precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos de la nota obtenida y retiros.  (Modismo 1)</li>
+        </ol>
     </div>
     <div class="container my-5 col-8">
         <h2 class="font-weight-bold">How</h2>
         <p>
             <h4>Modismo 1.1:</h4>
+            <p>Nota: Por categoría calculo precalculo hacemos referencia al ultimo registro de la nota obtenida por un estudiante en precalculo o calculo, al momento de ver el curso de APO I.</p>
             <h6>Marcas</h6>
             <p>Lineas para representar las barras.</p>
             <h6>Canales</h6>
-            <p>Escala express para representar cantidad de estudiantes. (Eje X)</p>
-            <p>Escala separate & align para representar la nota obtenida en precálculo y si fue inscritos, retiros, terminaron
-                el curso, aprobaron o reprobaron el curso de APO I(Eje Y)</p>
+            <p>Escala express para representar porcentaje de estudiantes dentro de una categoria de precalculo-calculo. (Eje X)</p>
+            <p>Escala separate & align para representar la categoria de precalculo-calculo y si se esta haciendo referencia a porcentaje de inscritos, retiros, terminaron el curso, aprobaron o reprobaron el curso de APO I (Eje Y)</p>
             <h6>Encode</h6>
-            <p>Color hue: sirve para diferenciar entre inscritos, retiron, terminaron el curso, aprobaron y reprobaron el curso
-                de APO I. </p>
+            <p>Color hue: sirve para diferenciar entre inscritos, retiron, terminaron el curso, aprobaron y reprobaron el curso de APO I. </p>
             <h6>Manipulate</h6>
             <p>En cuanto al manipulate hay un Select sobre cada barra para obtener la información detallada.</p>
             <h6>Reduce</h6>
-            <p>En cuanto al reduce hay un filter según las notas definitivas de precálculo.</p>
+            <p>En cuanto al reduce hay un filter según algun semestre en particular.</p>
 
             <h4>Modismo 1.2:</h4>
             <h6>Marcas</h6>
             <p>Lineas para representar cuartiles y medianas</p>
             <p>Puntos para representar los semestres</p>
             <h6>Canales</h6>
-            <p>Escala express para representar el porcentaje de retiros por nota de precalculo, es decir del 100% de los estudiantes
-                que sacaron A en precalculo, que porcentaje retiro. (Eje Y)</p>
-            <p>Escala separate & align para representar la nota obtenida en precálculo. (Eje X)</p>
+            <p>Escala express para representar el porcentaje de retiros por categoria de calculo-precalculo, es decir del 100% de los estudiantes que aprobaron precalculo, que porcentaje retiro. (Eje Y)</p>
+            <p>Escala separate & align para representar las categoria de calculo-precalculo. (Eje X)</p>
             <h6>Encode</h6>
-            <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no.</p>
+            <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no, además sirve para diferenciar los semestres.</p>
             <h6>Manipulate</h6>
-            <p>En cuanto al manipulate hay un Select sobre cada barra para obtener la información detallada.</p>
+            <p>En cuanto al manipulate hay un Select sobre cada caja para obtener la información detallada.</p>
             <h6>Reduce</h6>
-            <p>En cuanto al reduce hay un filter según las notas definitivas de calculo diferencial.</p>
+            <p>En cuanto al reduce hay un filter según algun semestre en particular.</p>
+
+            <h4>Modismo 1.3:</h4>
+            <h6>Marcas</h6>
+            <p>Lineas para representar cuartiles y medianas</p>
+            <p>Puntos para representar los semestres</p>
+            <h6>Canales</h6>
+            <p>Escala express para representar el porcentaje de estudiantes que perdieron APO I por categoría de calculo precalculo, es decir del 100% de los estudiantes que aprobaron precalculo, que porcentaje reprobo APO I. (Eje Y)</p>
+            <p>Escala separate & align para representar las categoria de calculo-precalculo. (Eje X)</p>
+            <h6>Encode</h6>
+            <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no, además sirve para diferenciar los semestres.</p>
+            <h6>Manipulate</h6>
+            <p>En cuanto al manipulate hay un Select sobre cada caja para obtener la información detallada.</p>
+            <h6>Reduce</h6>
+            <p>En cuanto al reduce hay un filter según algun semestre en particular.</p>
 
             <h4>Modismo 2:</h4>
             <h6>Marcas</h6>
