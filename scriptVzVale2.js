@@ -118,7 +118,7 @@ d3.csv("https://gist.githubusercontent.com/ValentinaChaconBuitrago/f77a909d5da26
         .style("font-size", "14px")
         .style("fill", "grey")
         .style("max-width", 400)
-        .text("A short description of the take-away message of this chart.");
+        .text("Los estudiantes que son considerados exitosos son aquellos que lográn pasar la materia de APO. Para esto se requiere más de 3.0 en la calificación final.");
 
     // X axis label:  
     svg.append("text")
