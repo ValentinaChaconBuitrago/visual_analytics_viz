@@ -1,15 +1,17 @@
-# Viz_LlamadasEmergencias
-Visualización sobre las llamadas que realizan los ciudadanos de Bogotá a las lineas de atención de emergencia 123.
-[Link a la Viz](https://nacaceres.github.io/Viz_LlamadasEmergencias/)
+# Visualización proyecto Cupi2
+Visualización sobre los factores que determinan el éxito de un estudiante en la materia APO I
+[Link a la Viz](https://valentinachaconbuitrago.github.io/visual_analytics_viz/)
 # Objetivo del proyecto
-Mostrar insights acerca de las llamadas que realizan los ciudadanos de Bogotá a las lineas de emergencia.
+Mostrar insights sobre el desempeño de los estudiantes de APO I.
 # Tecnologias usadas
 * HTML
 * CSS
+* D3
 * Tableau
 
 # Screenshot
-![Screenshot Pag Web](https://raw.githubusercontent.com/nacaceres/Viz_LlamadasEmergencias/master/Captura2.png)
+![Screenshot Pag Web](https://raw.githubusercontent.com/ValentinaChaconBuitrago/Visual_Analytics/master/Captura%20de%20pantalla%202019-11-12%20a%20la(s)%207.55.27%20p.%20m..png)
+
 # Autores
 [Nicolás Cáceres Acosta](https://github.com/nacaceres) 
 [Valentina Chacón](https://github.com/ValentinaChaconBuitrago) 
